@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> CSS magic</title>
+	<link rel="stylesheet" href="style.css">
+	<script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+	<style>
+		
+
+		.none-bullet-list{
+			list-style: none;
+		}
+		.none-bullet-list li a{
+			color: red;
+			background-color: pink;
+			text-decoration: none;
+		}
+		.none-bullet-list li a:hover{
+			color:pink;
+			background-color: red;
+		}
+		h2+p{
+			font-weight: bold;
+			font-size: 15px; 
+		}
+		#loginform{
+			border: 2px  rgb(20,70,60) dashed;
+		}
+		input[type=text] {
+		background-color: yellow;
+		}
+		input[type=text]:focus {
+		background-color: white;
+		}
+		.tabled-bordered{
+			display: table-cell;
+			padding: 5px;
+			border: 2px black solid;
+		}
+		span p::after{
+			content: 'Read This';
+			color: yellow;
+		}
+		#content>#aboutus{
+			color: yellow;
+		}
+		#aboutus{
+			color: red !important;
+		}
+	</style>
+</head>
+<body>
+	<div class="first-task">
+	<div id="header" style="width: 100%;background-color: rgb(155, 33, 33) ">
+		<h1 id="top">This is the page header</h1>
+	</div>
+	<span id="linksbar" style="width: 25%;
+	background-color: gray;
+	float: left;">
+		<div id="loginform" >
+			User name: <input type="text"/>
+			</br>
+			Password: <input type="password"/>
+			<br/>
+			<input type="checkbox" /> remember me
+			<br/>
+			<button>login</button>
+		</div>
+		<h2> site menu</h2>
+		<ul class="none-bullet-list">
+			<li><a href="#">link1</a></li>
+			<li><a href="#">link2</a></li>
+			<li><a href="#">link3</a></li>
+			<li><a href="#">link4</a></li>
+			<li><a href="#">link5</a></li>
+		</ul>
+	</span>
+	<span id="content" style="width: 75%;
+	background-color: pink;
+	float: right;">
+		<h2> about us</h2>
+		<p id="aboutus">
+			This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph.
+		</p>
+		
+		<div id="titles">
+			<span class="tabled-bordered"> title1</span>
+			<span class="tabled-bordered"> title2</span>
+			<span class="tabled-bordered"> title3</span>
+		</div>
+
+	</span>
+</div>
+<div style="clear:both">
+	<br> <hr> <br>
+	<!-- ---------------SECOND TASK----------- -->
+</div>
+<div class="second-task center">
+	<div class="t2-logo"> logo</div>
+	<div class="t2-nav"> navigation</div>
+	<div class="t2-content"> 
+		<div class="t2-col-1">my social profiles</div>
+		<div class="t2-col-2">Registration</div>
+		<div class="t2-col-3">Photo</div>
+	</div>
+	<div class="t2-footer">footer</div>
+</div>
+<br> <hr> <br>
+<!-- --------------THIRD TASK------------------- -->
+<div class="task-3">
+	<div class="t3-header">
+		<div class="t3-nav">
+			<table class="nav-table">
+				<tr>
+					<td class="nav-td1"><a href="#">
+						<img src="logo.png" alt="logo" class="nav-logo"></a>
+					</td>
+					<td class="nav-td2"></td>
+					<td class="nav-td3">
+						<a href="#"><img src="menu.png" class="nav-menu"></a>
+					</td>
+				</tr>
+			</table>
+
+		</div>
+		<div class="t3-hero">
+			<table >
+				<tr>
+					
+					<td class="td1"><div class="img-div"><img src="myimg.jpg" class="hero-img"></div></td>
+					<td class="td2">
+						<div class="hero-col2">
+							<span class="hero-name">I'M AHMED KHALED</span>
+							<span class="hero-title">Back-End Developer
+							</span>
+							<span class="hero-btn"><a href="#" >CONTACT ME</a></span>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="t3-about">
+		<h3 class="about-title">ABOUT ME</h3>
+		<p class="about-det">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi eaque ipsam facilis ratione a temporibus enim ab nobis laborum iste reiciendis, natus delectus quis molestiae nam id, corporis tempore sunt Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolor, molestias dicta reiciendis, consequatur magni, saepe ipsa architecto quidem iste totam quaerat blanditiis voluptatibus excepturi unde error ut. Doloremque, saepe Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius molestiae maxime consectetur, nemo nesciunt in. Voluptatibus ratione ducimus, sint, quas delectus incidunt provident quos ipsa, dolore ea soluta iste odio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus laborum eos doloremque tempora rem minus ab natus fugit, minima accusamus itaque impedit nam ex dolorum voluptatibus dolore quisquam nostrum </p>
+		<div class="social">
+			<a href="#">
+				<ion-icon class="social-logo" name="logo-github"></ion-icon>
+			</a>
+			<a href="#">
+				<ion-icon class="social-logo" name="logo-stackoverflow"></ion-icon>
+			</a>
+			<a href="#">
+				<ion-icon class="social-logo" name="logo-linkedin"></ion-icon>
+			</a>
+			<a href="#">
+				<ion-icon class="social-logo" name="logo-twitter"></ion-icon>
+			</a>
+			<a href="#">
+				<ion-icon class="social-logo" name="logo-whatsapp"></ion-icon>
+			</a>
+			<a href="#">
+				<ion-icon class="social-logo" name="logo-facebook"></ion-icon>
+			</a>
+
+		</div>
+
+	</div>
+	<div class="t3-skills">
+		<h3>MY SKILLS</h3>
+		<div class="all-skills">
+			<div class="first-3-skills">
+				<div class="single-skill">
+					<div>
+					<ion-icon name="logo-html5" class="skill-logo"></ion-icon>
+			    	</div>
+					<p class="skill-title">HTML</p>
+				</div>
+				<div class="single-skill">
+					<div>
+					<ion-icon name="logo-css3" class="skill-logo"></ion-icon></div>
+					<p class="skill-title">CSS</p>
+				</div>
+				<div class="single-skill">
+					<div>
+					<ion-icon name="logo-sass" class="skill-logo"></ion-icon></div>
+					<p class="skill-title">Sass</p>
+				</div>
+			</div>
+			<div class="second-3-skills"></div>
+				<div class="single-skill">
+					<div>
+					<ion-icon name="logo-javascript" class="skill-logo"></ion-icon></div>
+					<p class="skill-title">JavaScript</p>
+				</div>
+				<div class="single-skill">
+					<div>
+					<ion-icon name="logo-nodejs" class="skill-logo"></ion-icon></div>
+					<p class="skill-title">Node.Js</p>
+				</div>
+				<div class="single-skill">
+					<div>
+					<ion-icon name="logo-python" class="skill-logo"></ion-icon></div>
+					<p class="skill-title">Python</p>
+				</div>
+			</div>
+			<!-- <div class="single-skill">
+				<ion-icon name="logo-wordpress"></ion-icon>
+				<p class="skill-title">WordPress</p>
+			</div> -->
+			
+		</div>
+	</div>
+</div>
+
+<br> <br> <br>
+
+<a href="#top"><span class="arrow"> ^ </span></a>
+</body>
+</html>

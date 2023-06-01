@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ajax</title>
+  </head>
+  <body>
+    <input type="number" name="" id="xxx" />
+    <button onclick="onClick()">Display</button>
+    <div class="div"></div>
+    <div class="div2"></div>
+    <script>
+      var xhr = new XMLHttpRequest();
+
+      var onClick = function () {
+        var input = document.getElementById("xxx").value;
+        xhr.open("GET", "https://reqres.in/api/users/" + input);
+        xhr.send();
+        xhr.addEventListener("readystatechange", function () {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            var user = JSON.parse(xhr.response);
+            document.querySelector(".div2").innerHTML =
+              "<img src=" + user.data.avatar + ">";
+            document.querySelector(".div").innerHTML =
+              "<h3>First Name:</h3>" +
+              user.data.first_name +
+              "<h3>Last Name:</h3>" +
+              user.data.last_name;
+          }
+        });
+      };
+      console.log(xhr.response());
+    </script>
+  </body>
+</html>
+
+<!-- var img = document.createElement("IMG"); 
+document.querySelector(".div").appendChild(img);  img.setAttribute("src",
+user.data.avatar); -->

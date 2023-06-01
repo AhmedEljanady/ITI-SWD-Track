@@ -1,0 +1,151 @@
+body{
+    /* background-color: #f5f5f5; */
+}
+.list-group-item{
+    border: 0px;
+    padding: 0.65rem 1.25rem;
+    padding-left: 0px;
+    font-size: 9pt;
+}
+
+.list-group-item a{
+    text-decoration: none;
+    color: black;
+}
+.list-group-item a:hover{
+    color:#f68b1e;
+}
+.checked{
+    color: orange;
+}
+.bg-or{
+    background-color:#febd69;
+    color: rgb(39, 39, 39);
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    width: 45px;
+
+}
+.t-org{
+    color: #f68b1e;
+}
+
+.btn-outline-light:hover {
+    color: #ffffff;
+    background-color: #f68b1e;
+    border-color: #e77e14;
+}
+.t-gr{
+    color: #c8c8c8;
+}
+.card{
+    border: 0px;
+}
+.card a{
+    color: black;
+}
+.card a:hover{
+    text-decoration: none;
+}
+.card:hover{
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(0 0 0);
+}
+.navbar-brand{
+    width: 9%;
+}
+.navbar-brand img{
+    max-width: 100%;
+}
+.toplinks a{
+    color: black;
+}
+.gal img {
+    max-width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    height: auto;
+    background: #fff;
+    box-shadow: 1px 1px 7px rgba(0,0,0,0.1);
+  }
+  .main-image {
+    width: 380px;
+    margin-bottom: 0.75em;
+  }
+  .thumbnails li {
+    display: inline;
+    margin: 0 10px 0 0;
+  }
+ .bg-darker{
+     background-color: #232F3E;
+     color: white;
+ }
+ .bg-darke{
+    background-color: #131A22;
+    color: white;
+}
+ .f-li{
+     list-style: none;
+     font-size: x-small;
+     color: whitesmoke;
+ }
+ #wishlist{
+     font-size: larger;
+     cursor: pointer;
+     /* color: #6d6d6d; */
+ }
+ .form-inline .form-control {
+    margin-right: 0px !important;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.deliver{
+    font-size: 10pt;
+    line-height: 1;
+    color: white !important;
+    width: fit-content;
+}
+.fixed-top{
+    background-color: #131921 !important;
+}
+.deliver-icon{
+    color: white;
+    font-size: 14pt;
+}
+.nv-b-item{
+    display: inline-block;
+    width: fit-content;
+    font-size: 12pt;
+}
+.nav-butt{
+    background-color: #232f3e;
+    color: white;
+    line-height: 3
+}
+.nav-butt-w{
+    background-color: #fafafa;
+    line-height: 3
+}
+.card-img{
+    max-height: 44vh;
+    object-fit: contain;
+}
+.bg-ligh{
+    background-color: #3b4c61;
+    cursor: pointer;
+}
+.card-img-rec {
+    width: 75%;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+.card-rec{
+    max-height: 45vh;
+    object-fit: cover;
+}
+.unchecked{
+    color: white;
+    border: 2px solid orange;
+}

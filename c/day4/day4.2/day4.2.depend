@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1664462025 source:/home/ahmed/myproject/c/day4/day4.2/main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1664617508 source:d:\linux\project\c\day4\day4.2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

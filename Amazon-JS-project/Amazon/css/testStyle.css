@@ -1,0 +1,232 @@
+:root{
+ --bg:#ddd;
+ --searchColor:#5d3cbb;
+}
+.header{
+			text-align: center;
+		}
+		
+		*,*:before,*:after{box-sizing: border-box;}
+/*==============link tip===============*/
+		a[data-tip]{
+			position: relative;
+			color: orange;
+			font-size: 2rem;
+		}
+		a[data-tip]::after{
+			content: attr(data-tip);
+			position: absolute;
+			color: white;
+			background-color: var(--bg);
+			white-space: nowrap;
+			padding: .4em;
+			left: 100;
+			bottom: 0;
+			font-size: .5em;
+			border-radius: 5px;
+			margin-left: .5em;
+			transform: scale(0);
+			transition: transform ease-out 150ms;
+		}
+		
+		a[data-tip]:hover::after{
+			transform: scale(1);
+		}
+/*=============header===========*/
+		.headTitle{
+			position: relative;
+			display: inline-block;
+			color: darkcyan;
+			position: relative;
+			background-color: white;
+			padding-left: 1vw;
+			padding-right: 1vw;
+			font-size: 1.5rem;
+			margin-top: 20px;
+			
+		}
+		
+		.headTitle::after{
+			content: '';
+			height: 100%;
+			display: block;
+			background: darkcyan;
+			position: absolute; 
+			width: 100vw;
+			left: 50%;
+			transform: translatex(-50%);
+			z-index: -1;
+			top: 0;
+		}
+/*=====================================*/
+		.cardI{
+			position: relative;
+			height: 30vh;
+			overflow: hidden;
+
+		
+		}
+		.cardImg{
+			width: 66%;
+			display: block;
+			transition: height 600ms;
+			transition: width 600ms;
+			object-fit: cover;
+			/* max-height: 23vh; */
+			background-color: #b2bcc1;
+		}
+		
+
+		.cardImgH{
+			width: 30%;
+			
+		}
+
+		.cardText{
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: white;
+			opacity: 0;
+			transition: opacity ease-out 200ms;
+			width: 100%; 
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #0008;
+		}
+		.cardText:hover{
+			opacity: 1;
+		}
+		
+		.boxShadow1{
+			padding: 4em;
+    background-color: #606965;
+    color: white;
+    box-shadow: inset 0 0 0 10px #2a4747, inset 0 0 0 20px #439775, inset 0 0 0 30px #61d095;/* inset to make the shadow part of the item size*/
+		}
+		
+		.boxShadow2{
+			padding: 2em;
+    background-color: #b2bcc1;
+    color: white;
+    box-shadow: padding: 2em;
+    background-color: #b9c4ca;
+    color: white;
+    box-shadow: 0 20px 0 -10px #a8b3b7, 0 40px 0 -20px #8c9aa0, 0 60px 0 -30px #607D8B;/* inset to make the shadow part of the item size*/
+		}
+		.underLineLink{
+			height: 2px;
+    		background-color: deeppink;
+    		width: 0px;
+			transition: width 500ms;
+
+		}
+		.regLink{
+			color: #5d3cbb;
+    		text-decoration: none;
+			display: inline-block;
+			width:auto;
+			margin-left: 3em;
+			margin-right: 3em;
+			font-weight: 600;
+			font-size: 1em;
+		}
+		.regLink:hover{
+			color: #826dff;
+    		text-decoration: none;
+		}
+		.regLink:hover > .underLineLink{
+			width: 100%;
+			transition: width 500ms;
+			
+		}
+.navigat{
+	display: flex;
+	justify-content: space-between;
+	background-color: aliceblue;
+	width: 100%;
+	position: fixed;
+	z-index: 999;
+/*	margin-bottom: 40px;*/
+}
+.searchBox{
+	background-color: transparent;
+    height: 2.5em;
+    width: 26%;
+    
+    
+}
+.searchBox>form{
+	height: 100%;
+	margin: 0px;
+	padding: 0 .5em;
+	border-radius: 4px;
+    border: 1px solid var(--searchColor);
+	overflow: hidden;
+}
+.searchTxt{
+	border: none;
+	outline: none;
+	height: 100%;
+	color: var(--searchColor);
+	width: 90%;
+	background: transparent;
+}
+
+.searchTxt::placeholder{
+color:var(--searchColor)!important;
+	opacity: 1;
+	font-weight: 200;
+	letter-spacing: 3pt;
+}
+.searchTxt:focus+.searchBtn{
+	color: deeppink;
+}
+
+.searchTxt:focus::placeholder{
+	color: deeppink!important;
+}
+.searchBtn{
+	background: transparent;
+	border: none;
+	outline: none;
+	padding: 0px;
+	width: content;
+	font-size: 1.3em;
+	color: var(--searchColor);
+	letter-spacing: 3;
+}
+.arrow-up {
+	    width: 0; 
+	    height: 0; 
+	    border-left: 20px solid transparent;
+	    border-right: 20px solid transparent;
+	    border-bottom: 20px solid #d29e26;
+		display: inline-block;
+	}
+	.arrow-down {
+	    width: 0; 
+	    height: 0; 
+	    border-left: 20px solid transparent;
+	    border-right: 20px solid transparent;
+	    border-top: 20px solid #d29e26;
+			display: inline-block;
+	}
+	.arrow-left {
+	    width: 0; 
+	    height: 0; 
+	    border-bottom: 20px solid transparent;
+	    border-top: 20px solid transparent;
+	    border-right: 20px solid #d29e26;
+			display: inline-block;
+	}
+	.arrow-right {
+	    width: 0; 
+	    height: 0; 
+	    border-bottom: 20px solid transparent;
+	    border-top: 20px solid transparent;
+	    border-left: 20px solid #d29e26;
+			display: inline-block;
+	}

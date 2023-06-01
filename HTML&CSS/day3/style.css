@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+p,
+div,
+span {
+  font-family: "Lucida Calligraphy", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+div h1 {
+  text-align: center;
+}
+
+/* --------- ARROW TASK-------------- */
+
+.secont-task {
+  position: relative;
+  width: 100%;
+}
+
+.arrow {
+  background-color: #2a1818;
+  color: white;
+  padding: 8px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  font-size: 24px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  /* transition: all 0.5s ease-in; */
+}
+
+/* --------- LAYOUT TASK-------------- */
+
+.t2-logo {
+  width: 100%;
+  background-color: #aaa;
+  height: 30px;
+}
+.t2-nav {
+  width: 100%;
+  background-color: #bbb;
+  height: 30px;
+}
+.t2-col-1 {
+  width: 20%;
+  background-color: #ddd;
+  float: left;
+  height: 300px;
+}
+.t2-col-2 {
+  width: 60%;
+  background-color: #eee;
+  float: left;
+  height: 300px;
+}
+.t2-col-3 {
+  width: 20%;
+  background-color: #ddd;
+  float: left;
+  height: 300px;
+}
+.t2-footer {
+  width: 100%;
+  background-color: #bbb;
+  clear: both;
+  height: 30px;
+}
+.center {
+  text-align: center;
+}
+
+/* --------- MY HOME PAGE TASK-------------- */
+
+.nav-table {
+  width: 100%;
+  padding: 30px;
+}
+.nav-td1 {
+  width: 15%;
+}
+.nav-td2 {
+  width: 70%;
+}
+.nav-td3 {
+  width: 15%;
+}
+
+.task-3 {
+  width: 100%;
+}
+
+.t3-header {
+  width: 100%;
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.6),
+      rgba(34, 34, 34, 0.6)
+    ),
+    url("bk.jpg");
+}
+
+.nav-logo {
+  width: 50px;
+}
+.nav-menu {
+  width: 40px;
+  float: right;
+}
+
+table {
+  padding: 10% 20%;
+  width: 100%;
+}
+
+.td1 {
+  width: 50%;
+}
+
+.td2 {
+  width: 50%;
+}
+
+.img-div {
+  margin-right: 50px;
+}
+
+.hero-img {
+  width: 100px;
+  border-radius: 50%;
+  float: right;
+}
+
+.hero-col2 {
+  margin-left: 15px;
+}
+
+.hero-name {
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.hero-title {
+  color: white;
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.hero-btn {
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+}
+
+.hero-btn a {
+  width: 76%;
+  padding: 10px 15px;
+  margin-top: 5px;
+  display: block;
+  color: white;
+  text-decoration: none;
+  border: 2px white solid;
+  align-items: center;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.hero-btn a:hover {
+  color: rgb(83, 48, 48);
+  background-color: white;
+  transition: all, 0.5s;
+}
+
+/* ----------- about me---------------- */
+
+.t3-about {
+  background-color: #eeeaea;
+  text-align: center;
+}
+
+h3 {
+  letter-spacing: 4px;
+  text-align: center;
+  padding: 50px 0;
+  color: rgb(83, 48, 48);
+  position: relative;
+  left: 65px;
+}
+
+h3::after {
+  content: "------- ⊚ -------";
+  position: relative;
+  top: 25px;
+  right: 130px;
+  color: #644545;
+  font-weight: 300;
+  letter-spacing: -3px;
+}
+
+.about-det {
+  padding: 0 10%;
+  margin-bottom: 50px;
+  color: #644545;
+}
+
+.social {
+  text-align: center;
+  padding-bottom: 30px;
+}
+.social-logo {
+  color: #eeeaea;
+  height: 32px;
+  width: 32px;
+  background-color: #533030;
+  border-radius: 5px;
+  margin-left: 8px;
+}
+
+.ionicon,
+svg {
+  height: 30px;
+  width: 30px;
+}
+.social a {
+  text-decoration: none;
+}
+
+.social-logo:hover {
+  color: #644545;
+  background-color: #eeeaea;
+  transition: all, 0.5s;
+  /* height: 40px;
+  width: 40px; */
+}
+/* ---------------SKILLS--------------- */
+
+.t3-skills {
+  background-color: #eeeaea;
+  width: 100%;
+}
+
+.single-skill {
+  display: inline-block;
+  width: 180px;
+  margin: 40px calc((100% - 540px) / 7);
+  /* height: 200px; */
+  padding: 100px 0;
+  box-shadow: 1px 1px 15px #2a1818;
+  border-radius: 5px;
+}
+
+.single-skill:hover {
+  transform: translate(0, -20px);
+  transition: all 0.3s;
+}
+
+.single-skill div {
+  width: 75px;
+  margin: 0 auto;
+}
+
+.skill-logo {
+  color: #533030;
+  height: 72px;
+  width: 72px;
+
+  /* background-color: #; */
+  /* border-radius: 5px; */
+}
+
+.skill-title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 32px;
+  color: #2a1818;
+}
+.first-3-skills,
+.second-3-skills {
+  justify-items: space-between;
+  width: 100%;
+}

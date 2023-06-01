@@ -1,0 +1,6 @@
+#include "shape."
+
+shape::shape()
+{
+    //ctor
+}

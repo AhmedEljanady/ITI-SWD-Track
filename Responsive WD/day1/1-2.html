@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>media query</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      p {
+        font-size: 1.4rem;
+      }
+      .col-1 {
+        width: 8.33%;
+      }
+      .col-2 {
+        width: 16.66%;
+      }
+      .col-3 {
+        width: 25%;
+      }
+      .col-4 {
+        width: 33.33%;
+      }
+      .col-5 {
+        width: 41.66%;
+      }
+      .col-6 {
+        width: 50%;
+      }
+      .col-7 {
+        width: 58.33%;
+      }
+      .col-8 {
+        width: 66.66%;
+      }
+      .col-9 {
+        width: 75%;
+      }
+      .col-10 {
+        width: 83.33%;
+      }
+      .col-11 {
+        width: 91.66%;
+      }
+      .col-12 {
+        width: 100%;
+      }
+      .raw {
+        display: flex;
+        width: 100%;
+      }
+      .all-nav {
+        display: flex;
+        flex-direction: column;
+      }
+      .img-div {
+        padding: 13%;
+        background-color: #555;
+        border-radius: 50%;
+        margin: 50px auto;
+      }
+      .nav-img {
+        width: 5rem;
+      }
+      ul {
+        list-style: none;
+      }
+      li {
+        width: 70%;
+        margin: 15px auto;
+        font-size: 1.4rem;
+      }
+      li:hover {
+        background-color: silver;
+        transition: all 0.5s;
+      }
+      .main-img {
+        margin: 50px 30px 20px 0;
+        height: 300px;
+      }
+      .poster {
+        margin-bottom: 30px;
+      }
+      .post-img {
+        width: 30px;
+        margin: 10px;
+      }
+      .news {
+        padding: 1rem;
+      }
+      .news-img {
+        height: 7.5rem;
+        width: 90%;
+        display: block;
+        margin-bottom: 20px;
+      }
+      .news-title {
+        color: darkred;
+        margin-bottom: 10px;
+      }
+      /* .col-33 {
+        width: 25%;
+      } */
+      footer {
+        margin: 50px 0;
+        padding: 0 30px;
+      }
+      .icons {
+        margin-left: auto;
+      }
+      /* ***************************** */
+      /* ************Query************ */
+      /* ***************************** */
+      @media only screen and (max-width: 768px) {
+        .all {
+          display: block;
+        }
+        .all-nav {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+        }
+        .img-div {
+          width: 13%;
+          padding: 3%;
+          margin: 15px auto;
+        }
+        nav {
+          position: relative;
+          width: 75%;
+        }
+        ul {
+          display: flex;
+          position: absolute;
+          top: 50%;
+        }
+        li {
+          margin: auto 50px auto auto;
+        }
+        main {
+          width: 90% !important;
+          margin: 0 5rem 5rem 5rem;
+        }
+        .main-img {
+          margin-top: 0;
+        }
+      }
+      @media only screen and (max-width: 600px) {
+        nav {
+          display: none;
+        }
+        .nav-img {
+          width: 3.5rem;
+        }
+        .all-nav {
+          width: 100%;
+          display: block;
+        }
+        .img-div {
+          /* width: 100%; */
+          margin: 1.5rem auto;
+        }
+        .news {
+          display: block;
+          margin: 50px 30px 20px 0;
+        }
+        .news div {
+          width: 100%;
+        }
+        .news-img {
+          height: 15rem;
+        }
+      }
+    </style>
+  </head>
+  <body class="">
+    <div class="raw all">
+      <div class="all-nav col-3">
+        <div class="img-div">
+          <img class="nav-img" src="./cat.png" alt="" />
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#" class="icon"><i class="fa-solid fa-house x"></i></a>
+              Home
+            </li>
+            <li>
+              <a href="#" class="icon"
+                ><i class="fa-solid fa-envelope x"></i
+              ></a>
+              Messages
+            </li>
+            <li>
+              <a href="#" class="icon"
+                ><i class="fa-solid fa-earth-americas x"></i
+              ></a>
+              Global
+            </li>
+            <li>
+              <a href="#" class="icon"><i class="fa-solid fa-trash-can"></i></a>
+              Trush
+            </li>
+            <li>
+              <a href="#" class="icon"
+                ><i class="fa-solid fa-magnifying-glass"></i
+              ></a>
+              Search
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <main class="col-9">
+        <img class="main-img col-11" src="./gallery-1.jpg" />
+        <div class="col-11 raw poster">
+          <img class="post-img" src="cat.png" alt="" />
+          <p>
+            Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Maiores
+            laboriosam at sequi minima magni ea eius dolore dolor emque tempora.
+            Corrupti quasi voluptatum.
+          </p>
+        </div>
+        <div class="raw news">
+          <div class="col-3">
+            <img class="news-img" src="./gallery-1.jpg" alt="" />
+            <p class="news-title">
+              Lorem ipsum dolor sit amet consec tetur adipi sicing elit. Dolor
+              emque odit
+            </p>
+            <p class="news-det">
+              Lorem ipsum, dolor sit amet conse ctetur adipi sicing elit. Iste
+              perspi ciatis tempora animi expedita minus nostrum suscipit beatae
+              ullam qui squam, enim praes entium poss imus fuga, digni ssimos et
+              nesciunt soluta earum deserunt nihil?
+            </p>
+          </div>
+          <div class="col-3">
+            <img class="news-img" src="./gallery-4.jpg" alt="" />
+            <p class="news-title">
+              Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Dolor
+              emque odit
+            </p>
+            <p class="news-det">
+              Lorem ipsum, dolor sit amet conse ctetur adipi sicing elit. Iste
+              perspi ciatis tempora animi expedita minus nostrum suscipit beatae
+              ullam qui squam, enim praes entium poss imus fuga, digni ssimos et
+              nesciunt soluta earum deserunt nihil?
+            </p>
+          </div>
+          <div class="col-3">
+            <img class="news-img" src="./gallery-2.jpg" alt="" />
+            <p class="news-title">
+              Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Dolor
+              emque odit
+            </p>
+            <p class="news-det">
+              Lorem ipsum, dolor sit amet conse ctetur adipi sicing elit. Iste
+              perspi ciatis tempora animi expedita minus nostrum suscipit beatae
+              ullam qui squam, enim praes entium poss imus fuga, digni ssimos et
+              nesciunt soluta earum deserunt nihil?
+            </p>
+          </div>
+          <div class="col-3">
+            <img class="news-img" src="./gallery-3.jpg" alt="" />
+            <p class="news-title">
+              Lorem ipsum dolor sit amet conse ctetur adipi sicing elit. Dolor
+              emque odit
+            </p>
+            <p class="news-det">
+              Lorem ipsum, dolor sit amet conse ctetur adipi sicing elit. Iste
+              perspi ciatis tempora animi expedita minus nostrum suscipit beatae
+              ullam qui squam, enim praes entium poss imus fuga, digni ssimos et
+              nesciunt soluta earum deserunt nihil?
+            </p>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="col-12 raw">
+      <p>copyright bla bla bal blba</p>
+      <div class="flex icons">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </footer>
+  </body>
+</html>

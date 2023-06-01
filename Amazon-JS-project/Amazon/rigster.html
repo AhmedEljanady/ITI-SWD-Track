@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Amazon Registration </title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=0">
+
+    <link rel="stylesheet" href="bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="all.min.css" type="text/css">
+    <link rel="stylesheet" href="mystyle 2.css" type="text/css">
+
+</head>
+<style>
+    label {
+        font-size: 10pt;
+    }
+</style>
+
+<body>
+    <div class="container mt-5 mb-4">
+        <div class="row">
+            <div class="col-md-2 col-sm-4 mx-auto "><img class="logoImg" src="images/امازون مصر.png" alt=""></div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row px-4">
+            <div class="col-md-4 col-sm-9 mx-auto rounded border" style="background-color: white">
+                <h3 class="mt-3">Create Account</h3>
+                <div class="col-12 mt-4">
+                        <div class="row">
+
+                            <div class="col-12 mt-3">
+                                <label for="firstName" class="mb-1"> <B>Your Name</B></label>
+                                <input type="text" class="form-control" id="firstName" onblur="valName()" onchange="valName()">
+                                <p class="small text-danger" hidden id="err1">You Must Enter Your Name </p>
+
+                            </div>
+
+                            <div class="col-12 mt-3">
+                                <label for="email" class="mb-1"> <B> Email or phone number</B></label>
+                                <input type="email" class="form-control" id="email" onblur="valMail()" onchange="valMail()">
+                                <p class="small text-danger" hidden id="err2">Wrong email</p>
+
+                            </div>
+
+                            <div class="col-12 mt-3">
+                                <label for="pass" class="mb-1"> <B>Password</B></label>
+                                <input type="password" class="form-control" id="pass" onblur="valPass()" onchange="valPass()">
+                                <span class="small text-muted">Passwords must be at least 6 characters.</span>
+                               
+                            </div>
+
+                            <div class="col-12 mt-3">
+                                <label for="passR" class="mb-1"> <B>Re-enter Password</B></label>
+                                <input type="password" class="form-control" id="passR"  onblur="valPass()" onchange="valPass()">
+                                <p class="small text-danger" hidden id="err3">Password doesn't match</p>
+
+                            </div>
+                            <div class="col-12 mt-2">
+                                <button class="btn btn-primary my-4 w-100"
+                                    style="font-size: small; font-weight: bold;" id="sub" onclick="submitUser()">Confirm</button>
+                                <label for="" class="small">By Creating account, you agree to Amazon's <a href=""> Conditions
+                                        of Use </a>and <a href=""> Privacy Notice.</a></label>
+                                        <hr>
+                                        <label for="" class=" pb-3">Already have an account?  <a href="login.html"> Sign in.</a></label>
+
+                            </div>
+                        </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="row">
+            
+            <div class="col-10 mx-auto">
+                <hr>
+                <p class="text-center">
+                    <span class="px-3 small"> <a href=""> Conditions of Use</a></span>
+                    <span class="px-3 small"> <a href="">Privacy notice</a></span>
+                    <span class="px-3 small"> <a href="">Help</a></span>
+                    
+                </p>
+            </div>
+            <div class="col-12">
+                <p class="small text-center">
+                    &#169;1996–2022, Amazon.com, Inc. or its affiliates
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="popper.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="all.min.js"></script>
+
+    <script type="text/javascript">
+        var newUser = {id: "3", name: '', email: '', password: ''}
+
+        var n=false,m=false,p=false;
+      function valName(){
+       let name = document.querySelector("#firstName").value
+        if (name=='') {
+            document.querySelector("#err1").removeAttribute("hidden")
+        }else{
+            document.querySelector("#err1").setAttribute("hidden","hidden")
+            newUser.name = name;
+            n=true;
+        }
+       }
+       
+      function valMail(){
+       let mail = document.querySelector("#email").value
+       var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(mail.match(mailformat)){
+            document.querySelector("#err2").setAttribute("hidden","hidden")
+            newUser.email = mail;
+            m=true;
+        }else{
+            document.querySelector("#err2").removeAttribute("hidden")
+        }
+       }
+       
+      function valPass(){
+       let pass = document.querySelector("#pass").value
+       let passR = document.querySelector("#passR").value
+        if (pass!==passR) {
+            document.querySelector("#err3").removeAttribute("hidden")
+        }else{
+            document.querySelector("#err3").setAttribute("hidden","hidden")
+            newUser.password = pass;
+            p=true;
+        }
+       }
+       function submitUser(){
+        if (p&&n&&m) {
+            console.log(newUser);
+        localStorage.setItem("user", JSON.stringify(newUser));
+        window.location.href ="index.html"
+        }
+
+       }
+    </script>
+</body>
+
+</html>

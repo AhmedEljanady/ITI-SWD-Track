@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies</title>
+  </head>
+  <body>
+    username: <input type="text" id="username" />
+    <br />
+    password: <input type="password" id="pass" />
+    <br />
+    <input type="checkbox" name="Rememberme" id="Rememberme" /> Remember me
+    <br />
+    <button onclick="save()">save in cookies</button>
+    <script>
+      var x = document.getElementsByTagName("input");
+      function save() {
+        if (x[2].checked) {
+          var D = new Date();
+          D.setMonth(D.getMonth() + 5);
+          document.cookie = "username=" + x[0].value + ";expires=" + D;
+          document.cookie = "password=" + x[1].value + ";expires=" + D;
+        } else {
+          document.cookie = "username=;expires=";
+          document.cookie = "password=;expires=";
+        }
+      }
+    </script>
+  </body>
+</html>

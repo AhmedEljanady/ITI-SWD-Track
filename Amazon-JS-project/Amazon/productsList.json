@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "OPPO A16-6.52-inch 32GB/3GB Dual SIM 4G Mobile Phone",
+    "price": 1799,
+    "discount": 21,
+    "image": "images/01.jpg",
+    "description":"Get it as soon as Thursday, May 19 Fulfilled by Amazon - FREE Shipping on orders over EGP 350"
+  },
+  {
+    "id": 2,
+    "name": "OPPO A16-6.52-inch 32GB/3GB Dual SIM 4G Mobile Phone",
+    "price": 900,
+    "discount": 15,
+    "image": "images/02.jpg",
+    "description":"Get it as soon as Thursday, May 19 Fulfilled by Amazon - FREE Shipping on orders over EGP 350"
+  },
+  {
+    "id": 3,
+    "name": "OPPO A16-6.52-inch 32GB/3GB Dual SIM 4G Mobile Phone",
+    "price": 1815,
+    "discount": 85,
+    "image": "images/03.jpg",
+    "description":"Get it as soon as Thursday, May 19 Fulfilled by Amazon - FREE Shipping on orders over EGP 350"
+  },
+  {
+    "id": 4,
+    "name": "OPPO A16-6.52-inch 32GB/3GB Dual SIM 4G Mobile Phone",
+    "price": 999,
+    "discount": 85,
+    "image": "images/04.jpg",
+    "description":"Get it as soon as Thursday, May 19 Fulfilled by Amazon - FREE Shipping on orders over EGP 350"
+  },
+  {
+    "id": 5,
+    "name": "OPPO A16-6.52-inch 32GB/3GB Dual SIM 4G Mobile Phone",
+    "price": 545,
+    "discount": 0,
+    "image": "images/05.jpg",
+    "description":"Get it as soon as Thursday, May 19 Fulfilled by Amazon - FREE Shipping on orders over EGP 350"
+  },
+  {
+    "id": 6,
+    "name": "OPPO A16-6.52-inch 32GB/3GB Dual SIM 4G Mobile Phone",
+    "price": 725,
+    "discount": 95,
+    "image": "images/06.jpg",
+    "description":"Get it as soon as Thursday, May 19 Fulfilled by Amazon - FREE Shipping on orders over EGP 350"
+  },
+  {
+    "id": 7,
+    "name": "OPPO A16-6.52-inch 32GB/3GB Dual SIM 4G Mobile Phone",
+    "price": 985,
+    "discount": 21,
+    "image": "images/07.jpg",
+    "description":"Get it as soon as Thursday, May 19 Fulfilled by Amazon - FREE Shipping on orders over EGP 350"
+  },
+  {
+    "id": 8,
+    "name": "OPPO A16-6.52-inch 32GB/3GB Dual SIM 4G Mobile Phone",
+    "price": 1050,
+    "discount": 8,
+    "image": "images/05.jpg",
+    "description":"Get it as soon as Thursday, May 19 Fulfilled by Amazon - FREE Shipping on orders over EGP 350"
+  }
+]

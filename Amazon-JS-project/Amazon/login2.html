@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Amazon Sign in</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=0">
+
+    <link rel="stylesheet" href="bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="all.min.css" type="text/css">
+    <link rel="stylesheet" href="mystyle 2.css" type="text/css">
+
+</head>
+<style>
+    label{
+        font-size: 11pt;
+    }
+
+    .a-divider-inner{
+        height: 44px;
+    margin-bottom: -18px;
+    background: -webkit-linear-gradient(to bottom,rgba(0,0,0,.14),rgba(0,0,0,.03) 3px,transparent);
+    background: linear-gradient(to bottom,rgba(0,0,0,.14),rgba(0,0,0,.03) 3px,transparent);
+    z-index: 0;
+    zoom: 1;
+    }
+
+    .a-divider-inner:after {
+    display: block;
+    width: 100%;
+    height: 44px;
+    background-color: transparent;
+    background: -webkit-linear-gradient(to right,#fff,rgba(255,255,255,0),#fff);
+    background: linear-gradient(to right,#fff,rgba(255,255,255,0),#fff);
+    z-index: 1;
+    content: "";
+}
+</style>
+<body>
+    <div class="container mt-5 mb-4">
+        <div class="row">
+            <div class="col-sm-4 col-md-2 mx-auto "><img class="logoImg" src="images/امازون مصر.png" alt=""></div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row px-4">
+            <div class="col-md-4 col-sm-9 mx-auto rounded border" style="background-color: white">
+                <div class="col-12">
+                <h3 class="mt-3">Sign-In</h3>
+
+                    
+                        <div class="row">
+                            <div class="col-12">
+                                <label class="mb-3 w-100">
+                                    <span class="" id="enteredEmail"></span><a href="login1.html" class="small"> Change</a>
+                                </label></div>
+                            <div class="col-12">
+                                <label for="pass" class="mb-0 w-100"> Password <span class="px-3 small float-right"> <a href=""> Forget your password?</a></span></label>
+                                <input type="password" class="form-control" id="pass" placeholder="">
+                                <p class="small text-danger" hidden id="err2">Wrong Password</p>
+
+                            </div>
+
+                            <div class="col-12">
+                                <button class="btn btn-primary mt-4 w-100"
+                                    style="font-size: small; font-weight: bold;" onclick="checkPass()" id="sub">Sign-In</button>
+                                    <div class="input-group my-3">
+                                        <label class="mb-0 w-100"> 
+                                            <input type="checkbox"> Keep me Signed in <span class="px-1"> 
+                                                <a href="">Details</a></span>
+                                            </label>
+                                    </div>
+                            </div>
+                        </div>
+
+                </div>
+
+            </div>
+            
+        </div>
+        <div class="row  px-4">
+           
+            <div class="col-10 mx-auto">
+                <hr>
+                <p class="text-center">
+                    <span class="px-3 small"> <a href=""> Conditions of Use</a></span>
+                    <span class="px-3 small"> <a href="">Privacy notice</a></span>
+                    <span class="px-3 small"> <a href="">Help</a></span>
+                    
+                </p>
+            </div>
+            <div class="col-12">
+                <p class="small text-center">
+                    &#169;1996–2022, Amazon.com, Inc. or its affiliates
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="popper.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="all.min.js"></script>
+
+    <script type="text/javascript">
+
+        var val = document.querySelector("#pass")
+        var password = val.value
+        var user = JSON.parse(localStorage.getItem("user"));
+        document.querySelector("#enteredEmail").innerHTML= user.email
+        function checkPass(){
+            password = document.querySelector("#pass").value
+            if (password == user.password) {
+                document.querySelector("#err2").setAttribute("hidden","hidden")
+                localStorage.setItem("user", JSON.stringify(user));
+                window.location.href ="index.html"
+            }else{
+                document.querySelector("#err2").removeAttribute("hidden")
+
+                // localStorage.clear();
+            }
+        }
+        
+    </script>
+</body>
+
+</html>

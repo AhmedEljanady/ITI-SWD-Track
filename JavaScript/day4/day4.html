@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 4</title>
+    <style>
+      img {
+        width: 75px;
+        margin-right: 30px;
+      }
+      .imgs {
+        margin-top: 100px;
+      }
+      span {
+        font-size: 48px;
+      }
+      main {
+        margin-top: 20px;
+      }
+      main div {
+        display: inline-block;
+        overflow: hidden;
+      }
+      main img {
+        width: 150px;
+        opacity: 1;
+        /* height: 150px; */
+      }
+      main img:hover {
+        opacity: 0.3;
+        /* transition: all 0.5s; */
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" />
+    <button class="st-clock">start clock</button>
+
+    <div class="clock"></div>
+    <div class="imgs">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3MiLmb39iO83lt2L92MHiN32ixKXcPQzlAA&usqp=CAU"
+        alt="js"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM-W39gA373AyUo0BuQTvgc0LoErUADauXfQ&usqp=CAU"
+        alt="go"
+      />
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbYh1W8Pg_9lbsQsgZ1Tu5nuaBP1H7kJrD5A&usqp=CAU"
+        alt="python"
+      />
+      <span class="span1"></span>
+    </div>
+    <span class="span2"></span>
+    <main>
+      <div><img src="./gallery-1.jpg" class="op" /></div>
+      <div><img src="gallery-2.jpg" class="op" /></div>
+      <div><img src="gallery-3.jpg" class="op" /></div>
+      <div><img src="gallery-4.jpg" class="op" /></div>
+    </main>
+    <script src="day4.js"></script>
+  </body>
+</html>

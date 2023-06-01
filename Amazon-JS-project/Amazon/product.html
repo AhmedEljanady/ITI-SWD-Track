@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+    />
+    <link rel="stylesheet" href="bootstrap.css" />
+    <link rel="stylesheet" href="all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/testStyle.css" />
+
+    <style>
+      * {
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .carousel-inner img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .bigger {
+        height: 40vh;
+      }
+      .addToCartBtn {
+        display: inline-block;
+        width: 12rem;
+        background-color: #f7be34;
+        border-radius: 100px;
+        padding: 0.34rem 1rem;
+      }
+      .buyNowBtn {
+        display: inline-block;
+        width: 12rem;
+        background-color: #f79b34;
+        border-radius: 100px;
+        padding: 0.34rem 1rem;
+      }
+      .price {
+        font-weight: bold;
+      }
+      .greenLink {
+        color: cadetblue;
+        font-weight: 500;
+        font-size: 0.9rem;
+        margin: 0.5rem;
+      }
+    </style>
+  </head>
+
+  <body class="mt-5" style="background-color: #eaeded" onload="checkLogin()">
+    <nav
+      class="navbar navbar-expand-lg navbar-dark fixed-top bg-white shadow-sm"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img src="images/amazon_PNG11.png" alt=""
+        /></a>
+        <i class="fa fa-location-dot deliver-icon mr-1"></i>
+        <a class="navbar-brand deliver" href="#"
+          >Deliver to<br />
+          <b>ASSIUT</b></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="form-inline my-2 my-lg-0" style="width: 68%">
+            <input
+              class="form-control mr-sm-2 w-75"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              style="width: 90% !important"
+            />
+            <button class="btn shadow my-2 my-sm-0 bg-or" type="submit">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item" style="display: grid; place-items: center">
+              <a id="noLogin" class="navbar-brand deliver" href="login1.html"
+                >Hello Sign in <br /><b style="line-height: 1.5"
+                  >Accounts & Lists</b
+                ></a
+              >
+              <a
+                id="logged"
+                class="navbar-brand deliver"
+                href="#"
+                onclick="logout()"
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#"><b>Orders</b></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="cart.html"
+                ><i class="fas fa-shopping-cart" style="font-size: 19pt"></i>
+                Cart
+                <sup
+                  ><span
+                    class="badge badge-warning p-1 font-weight-bold"
+                    id="cartCounter"
+                    >0</span
+                  ></sup
+                ></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid pt-3">
+      <div class="row">
+        <div class="col-12 nav-butt">
+          <a href="#" class="nv-b-item mx-2"><b>All</b></a>
+          <a href="#" class="nv-b-item mx-2">Mobile phones</a>
+          <a href="#" class="nv-b-item mx-2">Amazon.eg</a>
+          <a href="#" class="nv-b-item mx-2">Electronics</a>
+          <a href="#" class="nv-b-item mx-2">Perfum</a>
+          <a href="#" class="nv-b-item mx-2">Help</a>
+          <a href="#" class="nv-b-item mx-2">Toys & Games</a>
+          <a href="#" class="nv-b-item mx-2">Fashion</a>
+          <a href="#" class="nv-b-item mx-2">Copuns</a>
+          <a href="#" class="nv-b-item mx-2">Perfum</a>
+          <a href="#" class="nv-b-item mx-2">Sell</a>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid border-bottom">
+      <div class="row">
+        <div class="col-12 nav-butt-w">
+          <a href="#" class="nv-b-item mx-2"><b>Home Care</b></a>
+          <a href="#" class="nv-b-item mx-2">Best Sellers</a>
+          <a href="#" class="nv-b-item mx-2">Paper& Plastic Supplies</a>
+          <a href="#" class="nv-b-item mx-2">Laundry</a>
+          <a href="#" class="nv-b-item mx-2">Supermarket</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid mt-5">
+      <div class="row pt-4 bg-white">
+        <div class="col-12 mb-5 text-center">
+          <img src="images/313Yc718BVL.jpg" alt="" />
+        </div>
+        <div class="col-5 p-5" style="padding-top: 0px !important">
+          <img src="" id="img" alt="" class="w-75" />
+        </div>
+        <div class="col-5">
+          <h5 id="productName"></h5>
+          <p class="text-muted" id="description"></p>
+          <div>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div>
+          <span
+            ><a href="" class="small greenLink">40 answered questions</a></span
+          >
+          <span><a href="" class="small greenLink">7254 ratings </a></span
+          ><br />
+          <span><a href="" class="small greenLink">electronics </a></span>
+
+          <hr />
+          <p>
+            <span class="discount text-danger h5 mx-2"></span>
+            <span class="price h4"></span>
+          </p>
+          <p class="text-muted small mb-0">All prices include VAT.</p>
+          <h6>
+            Buy with installments and pay EGP 45.08 for 60 months with select
+            banks
+          </h6>
+        </div>
+        <div class="col-2">
+          <div class="border py-5 rounded text-center" style="height: 70vh">
+            <p>
+              <span class="price h4"></span>
+            </p>
+            <span class="small">EGP 21.00 delivery</span>
+            <p class="text-success">Only 2 left in stock - order soon.</p>
+            <button class="addToCartBtn btn my-1" onclick="addToCart()">
+              Add to Cart
+            </button>
+            <button class="buyNowBtn btn my-1">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ************** footer ************** -->
+    <div class="bg-ligh p-0">
+      <h5 class="text-center m-0 py-3 text-light" id="goUp">Back to Top</h5>
+    </div>
+    <div class="bg-darker pt-2">
+      <div class="container">
+        <div class="row py-3 mt-3">
+          <div class="col-md-2 col-sm-6">
+            <img class="footerlogo w-75" src="images/amazon_PNG11.png" alt="" />
+          </div>
+          <div class="col-md-6 col-sm-6">
+            <h6><b>NEW TO AMAZON?</b></h6>
+            <p>
+              <small
+                >Subscribe to our newsletter to get updates on our latest
+                offers!</small
+              >
+            </p>
+            <form class="form-inline my-2 my-lg-0">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Enter Email Address"
+                aria-label="Search"
+              />
+            </form>
+          </div>
+
+          <div class="col-md-4 col-sm-6">
+            <h6><b>DOWNLOAD AMAZON FREE APP</b></h6>
+            <p><small>Get access to exclusive offers!</small></p>
+
+            <button type="button" class="btn btn-outline-light mr-2">
+              <i class="fab fa-app-store"></i> App Store
+            </button>
+            <button type="button" class="btn btn-outline-light">
+              <i class="fab fa-google-play"> </i> Google Play
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-darke text-white pt-2">
+      <div class="container">
+        <div class="row py-3">
+          <div class="col-md-3 col-sm-6">
+            <h6><b> LET US HELP YOU</b></h6>
+            <ul class="p-0">
+              <li class="f-li"></li>
+              <li class="f-li">Help Center</li>
+              <li class="f-li">Contact us</li>
+              <li class="f-li">How to buy on Amazon?</li>
+              <li class="f-li">How to pay on Amazon?</li>
+              <li class="f-li">Delivery timelines</li>
+              <li class="f-li">Return Policy</li>
+              <li class="f-li">Corporate Services</li>
+              <li class="f-li">Report a Product</li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <h6><b> ABOUT AMAZON EGYPT</b></h6>
+            <ul class="p-0">
+              <li class="f-li"></li>
+              <li class="f-li">How to pay on Amazon?</li>
+              <li class="f-li">Delivery timelines</li>
+              <li class="f-li">Return Policy</li>
+              <li class="f-li">Help Center</li>
+              <li class="f-li">Contact us</li>
+              <li class="f-li">How to buy on Amazon?</li>
+              <li class="f-li">Corporate Services</li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <h6><b> MAKE MONEY WITH AMAZON</b></h6>
+            <ul class="p-0">
+              <li class="f-li">Sell on Amazon</li>
+              <li class="f-li">Become a Logistics Service Partner</li>
+              <li class="f-li">Become a Sales Consultant (J-Force )</li>
+            </ul>
+          </div>
+
+          <div class="col-md-3 col-sm-6">
+            <h6><b> AMAZON INTERNATIONAL</b></h6>
+            <ul class="p-0">
+              <li class="f-li"></li>
+              <li class="f-li">Algeria</li>
+              <li class="f-li">Ghana</li>
+              <li class="f-li">Kenya</li>
+              <li class="f-li">Morocco</li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <h6><b>JOIN US ON</b></h6>
+            <p>
+              <span class="text-white rounded-circle px-2 py-1"
+                ><i class="fab fa-facebook"></i
+              ></span>
+              <span class="text-white rounded-circle px-2 py-1"
+                ><i class="fab fa-twitter"></i
+              ></span>
+              <span class="text-white rounded-circle px-2 py-1"
+                ><i class="fab fa-youtube"></i
+              ></span>
+              <span class="text-white rounded-circle px-2 py-1"
+                ><i class="fab fa-instagram"></i
+              ></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="popper.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="all.min.js"></script>
+    <script>
+      function checkLogin() {
+        var loggedUser = JSON.parse(localStorage.getItem("user"));
+        if (loggedUser == null) {
+          document.querySelector("#logged").setAttribute("hidden", "hidden");
+          document.querySelector("#noLogin").removeAttribute("hidden");
+        } else {
+          document.querySelector("#noLogin").setAttribute("hidden", "hidden");
+          document.querySelector("#logged").removeAttribute("hidden");
+          document.querySelector("#logged").innerHTML =
+            'Hello Logout<br /><b style="line-height: 1.5" onclick="localStorage.clear()">' +
+            loggedUser.name +
+            "</b>";
+        }
+      }
+    </script>
+    <script>
+      var cartLe = JSON.parse(localStorage.getItem("cart"));
+      document.querySelector("#cartCounter").innerHTML = cartLe.length;
+    </script>
+    <script>
+      var pp;
+      var xhr = new XMLHttpRequest();
+      xhr.open("GET", "productsList.json");
+      xhr.send();
+
+      xhr.addEventListener("readystatechange", function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+          var data = JSON.parse(xhr.response);
+          let product = data.filter((product) => product.id == id);
+          pp = product[0];
+
+          document.querySelectorAll(".price").forEach((element) => {
+            element.innerHTML = "<sup>Egp</sup>" + pp.price + "<sup>00</sup>";
+          });
+          document.querySelector(".discount").innerHTML =
+            "-" + pp.discount + "%";
+          document.querySelector("#productName").innerHTML = pp.name;
+          document.querySelector("#description").innerHTML = pp.description;
+          document.querySelector("#img").setAttribute("src", pp.image);
+        }
+      });
+
+      var link = window.location.search;
+      var id = link.match(/id=([^&]+)/)[1];
+
+      function addToCart() {
+        var storedProducts = JSON.parse(localStorage.getItem("cart"));
+        if (storedProducts == null) {
+          var arr = [];
+          arr.push({ id: pp.id, count: 1 });
+          localStorage.setItem("cart", JSON.stringify(arr));
+          document.querySelector("#cartCounter").innerHTML = arr.length;
+          console.log(JSON.parse(localStorage.getItem("cart")));
+          alert("Product Added Successfully");
+        } else {
+          var storedProducts = JSON.parse(localStorage.getItem("cart"));
+          storedProducts.push({ id: pp.id, count: 1 });
+          localStorage.setItem("cart", JSON.stringify(storedProducts));
+          alert("Product Added Successfully");
+        }
+        // console.log(storedProducts);
+        document.querySelector("#cartCounter").innerHTML =
+          storedProducts.length;
+      }
+      function logout() {
+        localStorage.clear();
+        location.reload();
+      }
+    </script>
+  </body>
+</html>

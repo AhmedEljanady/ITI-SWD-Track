@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local storage</title>
+  </head>
+  <body>
+    username : <input type="text" />
+    <br />
+    password : <input type="password" />
+    <br />
+    <input type="checkbox" name="Rememberme" id="Rememberme" /> Remember me
+    <br />
+    <button onclick="save()">login</button>
+    <script>
+      var x = document.getElementsByTagName("input");
+      function save() {
+        if (x[2].checked) {
+          localStorage.setItem("username", x[0].value);
+          localStorage.setItem("password", x[1].value);
+          // console.log(x[0].value, x[1].value);
+        } else {
+          localStorage.removeItem("username");
+          localStorage.removeItem("password");
+        }
+      }
+      window.onload = function () {
+        x[0].value = localStorage.getItem("username");
+        x[1].value = localStorage.getItem("password");
+      };
+    </script>
+  </body>
+</html>

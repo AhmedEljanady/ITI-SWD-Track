@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1664476815 source:/home/ahmed/myproject/c/day2.1/main.c
+	<stdio.h>
+	<stdlib.h>
+	<ncurses.h>
+	<ncursesw/curses.h>
+	<ncurses_dll.h>
+
+1664582010 source:d:\linux\project\c\day2.1\main.c
+	<stdio.h>
+	<stdlib.h>
+

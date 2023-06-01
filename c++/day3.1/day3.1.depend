@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1665577194 source:f:\linux\project\c++\day3.1\main.cpp
+	<iostream>
+	<fraction.h>
+
+1665513640 f:\linux\project\c++\day3.1\include\fraction.h
+	<iostream>
+

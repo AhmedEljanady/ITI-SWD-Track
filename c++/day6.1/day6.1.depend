@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1665947740 source:f:\linux\project\c++\day6.1\main.cpp
+	<iostream>
+	<rectangle.h>
+	<square.h>
+	"Picture.h"
+	"circle.h"
+	"Shape.h"
+
+1665947912 f:\linux\project\c++\day6.1\include\rectangle.h
+	<iostream>
+	"Shape.h"
+
+1665947912 f:\linux\project\c++\day6.1\include\square.h
+	"Shape.h"
+	<iostream>
+
+1665947856 f:\linux\project\c++\day6.1\include\picture.h
+	<iostream>
+	<rectangle.h>
+	<square.h>
+	"Shape.h"
+
+1665947773 f:\linux\project\c++\day6.1\include\shape.h
+	<iostream>
+
+1665947912 f:\linux\project\c++\day6.1\include\circle.h
+	"Shape.h"
+	<iostream>
+
